@@ -1,0 +1,49 @@
+@import url('./main-movie.css');
+
+:root {
+    --red:#E50914;
+    --black: #141414;
+    --gray: #AAA;
+    --white: #FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--black) ;
+    font-family: 'Roboto',sans-serif;
+    color: var(--white);
+}
+
+header .container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    color: var(--red);
+    font-family: 'Arial Black',sans-serif;
+    font-size: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--gray);
+    margin-right: 10px;
+}
+
+nav a:hover {
+    color: var(--white);
+}

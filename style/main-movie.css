@@ -1,0 +1,41 @@
+.main-movie {
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2) 100%),url('../resources/img/main-cover.jpg') no-repeat center;
+    background-size: cover;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.main-movie-title {
+    font-size: 2.5rem;
+    font-family: 'Trebuchet MS',sans-serif;
+    margin-top: 5%;
+}
+
+.main-movie-description { 
+    margin-bottom: 4.68rem;
+    margin-top: 1.3rem;
+}
+
+.btn {
+    background-color: var(--red);
+    border: none;
+    color: var(--white);
+    padding: 0.938rem 1.875rem;
+    border-radius: 0.3rem;
+    margin-right: 0.938rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.btn i {
+    margin-right: 0.5rem;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--red);
+}
