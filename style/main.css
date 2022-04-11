@@ -1,4 +1,7 @@
 @import url('./main-movie.css');
+@import url('./movie-carousel.css');
+@import url('./responsive.css');
+@import url('./footer.css');
 
 :root {
     --red:#E50914;
@@ -24,7 +27,7 @@ body {
 }
 
 header .container {
-    width: 100%;
+    max-width: 100vw;
     height: 80px;
     display: flex;
     align-items: center;
