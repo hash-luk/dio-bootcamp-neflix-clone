@@ -10,7 +10,7 @@ body {
   color: #FFF;
 }
 
-header .container {
+header .container-menu {
   width: 100%;
   height: 68px;
   display: flex !important;
@@ -80,6 +80,10 @@ nav a {
 
 nav a:hover {
   color: #AAA;
+}
+
+.black {
+  background: #141414 !important;
 }
 
 .main-movie {
@@ -259,4 +263,60 @@ nav a:hover {
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+}
+
+footer {
+  width: 1110px;
+  height: 247px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  gap: 5px;
+  padding: 10px 0px;
+}
+footer .footer-options {
+  width: 100%;
+  height: 126px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 35px;
+}
+footer .footer-options ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  list-style: none;
+}
+footer .footer-options ul a {
+  text-decoration: none;
+  color: #808080;
+}
+footer .social-icons {
+  width: 100%;
+  height: 30.77px;
+}
+footer .social-icons .social-link {
+  width: 36px;
+  height: 100%;
+  cursor: pointer;
+}
+footer > a {
+  text-decoration: none;
+  color: #808080;
+  border: 1px solid #808080;
+  padding: 6.5px;
+}
+footer > a:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+footer p {
+  width: 100%;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
