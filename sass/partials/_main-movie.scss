@@ -1,0 +1,139 @@
+.main-movie {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+
+        .filter {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.16430322128851538) 35%, rgba(0,0,0,0) 100%);  
+        }
+
+        .information {
+            width: 640px;
+            height: 523px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-left: 60px;
+        }
+
+        .film-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -2;
+            overflow-x: hidden !important;
+            object-fit: cover;
+        }
+
+        .main-movie-title {
+            min-height: 13.2vh;
+            position: relative;
+            margin-bottom: 1.2vh;
+            width: 100%;
+            font-size: 5vh;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+        }
+
+        .main-movie-description {
+            font-size: 24;
+            width: 100%;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+            line-height: normal;
+        }
+
+        .main-movie-buttons {
+            width: 100%;
+            line-height: 88%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 13px;
+            font-family: 'Open Sans', sans-serif;
+
+            button {
+                height: 54px;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+
+                i {
+                    margin-right: 8px;
+                }
+            }
+
+            .play {
+                width: 180px;
+
+                &:hover {
+                    background-color: rgba(191,191,191,1);
+                }
+            }
+
+            .more-information {
+                width: 281px;
+                background-color: rgba(109, 109, 110, 0.7);
+                color: $netflix-white;
+                
+
+                &:hover {
+                    background-color:rgba(109, 109, 110, 0.5)
+                }
+            }
+
+            
+        }
+
+    }
+
+    .parental-rating {
+        width: 121px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        font-family: 'Open Sans', sans-serif;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        bottom: 100px;
+        background-color: rgba(51,51,51,.6);
+
+        .bar {
+            height: 100%;
+            width: 5px;
+            background-color: $netflix-white;
+        }
+
+        .age {
+            background-color: yellow;
+            color: $netflix-black;
+            height: 41px;
+            width: 41px;
+            font-size: 1.1vw;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 8px;
+        }
+    }
+}

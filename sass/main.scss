@@ -1,0 +1,11 @@
+$netflix-red: #E50914;
+$netflix-black: #141414;
+$netflix-gray: #AAA;
+$netflix-white: #FFF;
+$netflix-white-light: #e5e5e5;
+
+@import './partials/_resets.scss';
+@import './partials/_header.scss';
+@import './partials/_main-movie.scss';
+@import './partials/_movie-carousel.scss';
+

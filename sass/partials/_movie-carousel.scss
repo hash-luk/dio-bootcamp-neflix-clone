@@ -1,0 +1,67 @@
+.movie-box {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.movie-carousel {
+    margin-top: 10px;
+    padding: 0px 0px 0px 60px;
+    overflow-x: hidden;
+
+    .section-title {
+        font-size: 19px;
+        font-family: 'Open Sans',sans-serif;
+        color: $netflix-white-light;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        text-align: center;
+        cursor: pointer;
+
+        .see-all {
+            margin-left: -80px;
+            line-height: .8vw;
+            font-size: 14px;
+            opacity: 0;
+            transition: all .3s ease;
+
+        }
+
+        &:hover {
+            p {
+                margin-left: 4px;
+                opacity: 1;
+            }
+        }
+    }
+
+    .movie-row {
+        width: 99999px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        gap: 1px;
+    }
+
+
+    .item {
+        width: 340px !important;
+        height: 191px !important;
+        transform: scale(0.9);
+        transition: all .3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+}
