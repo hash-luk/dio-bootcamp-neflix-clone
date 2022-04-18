@@ -32,7 +32,7 @@ Este foi um projeto bem simples feito em uma aula da DIO, um clone da UI da Netf
 
 ## Licença 👨🏼‍⚖️
 
-[MIT]()
+[MIT](https://github.com/hash-luk/dio-bootcamp-neflix-clone/blob/main/LICENSE)
 
 #
 
