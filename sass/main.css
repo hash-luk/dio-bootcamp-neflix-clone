@@ -216,6 +216,27 @@ nav a:hover {
 .movie-carousel {
   margin-top: 10px;
   padding: 0px 0px 0px 60px;
+  position: relative;
+}
+.movie-carousel button {
+  position: absolute;
+  top: 45px;
+  z-index: 999;
+  height: 80%;
+  width: 40px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  cursor: pointer;
+}
+.movie-carousel button:hover {
+  background-color: #141414;
+}
+.movie-carousel .prev {
+  left: 60px;
+}
+.movie-carousel .next {
+  right: 0px;
 }
 .movie-carousel .section-title {
   font-size: 19px;
@@ -241,10 +262,11 @@ nav a:hover {
 .movie-carousel .movie-row {
   height: 200px;
   margin-bottom: 10px;
+  position: relative;
 }
 .movie-carousel .item {
-  width: 340px !important;
-  height: 191px !important;
+  width: 340px;
+  height: 191px;
   transform: scale(0.9);
   transition: all 0.3s ease;
   cursor: pointer;

@@ -7,6 +7,32 @@
 .movie-carousel {
     margin-top: 10px;
     padding: 0px 0px 0px 60px;
+    position: relative;
+
+    
+    button {
+        position: absolute;
+        top:45px;
+        z-index: 999;
+        height: 80%;
+        width: 40px;
+        border: none;
+        background-color: $transparent-black;
+        color: $netflix-white;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $netflix-black;
+        }
+    }
+
+    .prev {
+        left:60px;
+    }
+
+    .next {
+        right:0px;
+    }
 
     .section-title {
         font-size: 19px;
@@ -38,12 +64,14 @@
     .movie-row {
         height: 200px;
         margin-bottom: 10px;
+        position: relative;
+
+
     }
 
-
     .item {
-        width: 340px !important;
-        height: 191px !important;
+        width: 340px ;
+        height: 191px;
         transform: scale(0.9);
         transition: all .3s ease;
         cursor: pointer;

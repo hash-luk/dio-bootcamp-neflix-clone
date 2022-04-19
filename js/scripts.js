@@ -1,6 +1,3 @@
-console.log($('header').offset() - $(document).scrollTop());
-
-
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     if (scroll > 0) {

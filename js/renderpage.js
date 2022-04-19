@@ -75,27 +75,36 @@ movies = [
 function createPage(movies) {
     movies.forEach(movie => {
         const movieCarousel = document.createElement('div')
-        const owlCarousel = document.createElement('div')
+        const movieRow = document.createElement('div')
         const sectionTitle = document.createElement('h3')
         const pElement = document.createElement('p')
         const iconElement = document.createElement('i')
-        const arrowLeft = document.createElement('i')
-        const arrowRight = document.createElement('i')
+        const arrowLeft = document.createElement('button')
+        const arrowRight = document.createElement('button')
+        const iconPrev = document.createElement('i')
+        const iconNext = document.createElement('i')
+
+        arrowLeft.classList.add('prev')
+        arrowRight.classList.add('next')
+        iconPrev.classList.add('fa-solid', 'fa-angle-left')
+        iconNext.classList.add('fa-solid', 'fa-angle-right')
+
+        arrowLeft.appendChild(iconPrev)
+        arrowRight.appendChild(iconNext)
+
         iconElement.classList.add('fa-solid', 'fa-angle-right')
-        arrowLeft.classList.add('fa-solid', 'fa-angle-left','glider-prev')
-        arrowRight.classList.add('fa-solid', 'fa-angle-right','glider-next')
         pElement.innerHTML = 'Ver tudo'
         pElement.classList.add('see-all')
         movieCarousel.classList.add('movie-carousel','glider-contain')
-        owlCarousel.classList.add ('movie-row','glider')
+        movieRow.classList.add ('movie-row','glider')
         sectionTitle.classList.add ('section-title')
         sectionTitle.innerHTML = movie.title
-        owlCarousel.appendChild(arrowLeft)
-        owlCarousel.appendChild(arrowRight)
+        movieCarousel.appendChild(arrowLeft)
+        movieCarousel.appendChild(arrowRight)
         pElement.appendChild(iconElement)
         sectionTitle.appendChild(pElement)
         movieCarousel.appendChild(sectionTitle)
-        movieCarousel.appendChild(owlCarousel)
+        movieCarousel.appendChild(movieRow)
         moviesSection.appendChild(movieCarousel)
 
         movie.items.then(res => {
@@ -106,7 +115,7 @@ function createPage(movies) {
                 movieImage.src = `https://image.tmdb.org/t/p/original${item.poster_path}`
                 movieImage.classList.add('movie-box')
                 movieItem.appendChild(movieImage)
-                owlCarousel.appendChild(movieItem)
+                movieRow.appendChild(movieItem)
             })
         })
     })
@@ -122,13 +131,13 @@ function createCarousel() {
     setTimeout(() => {
         gliders.forEach(glider => {
             new Glider(glider , {
-                slidesToShow: 7,
-                slidesToScroll: 7,
+                slidesToShow: 'auto',
+                slidesToScroll: 'auto',
                 draggable: true,
-                dots: '.dots',
+                itemWidth: 340,
                 arrows: {
-                    prev: '.glider-prev',
-                    next: '.glider-next'
+                    prev: '.prev',
+                    next: '.next'
                 }
             })
         })
@@ -141,7 +150,6 @@ createCarousel()
 
 async function fetchData (endpoint) {
   const res = await fetch(`${API_BASE}${endpoint}&api_key=${API_KEY}`).then(films => films.json())
-  console.log(res.results)
   return res
 }
 
