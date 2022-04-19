@@ -1,9 +1,19 @@
+//Colors
 $netflix-red: #E50914;
 $netflix-black: #141414;
 $netflix-gray: #AAA;
 $netflix-white: #FFF;
 $netflix-white-light: #e5e5e5;
 $transparent-black: rgba(0, 0, 0, 0.5);
+
+
+// Media Queries
+$mobile-very-small: 320px;
+$mobile-max-width: 480px;
+$tablet-max-width: 768px;
+$desktop-max-width: 1024px;
+$large-desktop-max-width: 1440px;
+
 
 @import './partials/_resets.scss';
 @import './partials/_header.scss';
