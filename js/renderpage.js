@@ -79,13 +79,19 @@ function createPage(movies) {
         const sectionTitle = document.createElement('h3')
         const pElement = document.createElement('p')
         const iconElement = document.createElement('i')
+        const arrowLeft = document.createElement('i')
+        const arrowRight = document.createElement('i')
         iconElement.classList.add('fa-solid', 'fa-angle-right')
+        arrowLeft.classList.add('fa-solid', 'fa-angle-left','glider-prev')
+        arrowRight.classList.add('fa-solid', 'fa-angle-right','glider-next')
         pElement.innerHTML = 'Ver tudo'
         pElement.classList.add('see-all')
-        movieCarousel.classList.add('movie-carousel')
-        owlCarousel.classList.add ('movie-row')
+        movieCarousel.classList.add('movie-carousel','glider-contain')
+        owlCarousel.classList.add ('movie-row','glider')
         sectionTitle.classList.add ('section-title')
         sectionTitle.innerHTML = movie.title
+        owlCarousel.appendChild(arrowLeft)
+        owlCarousel.appendChild(arrowRight)
         pElement.appendChild(iconElement)
         sectionTitle.appendChild(pElement)
         movieCarousel.appendChild(sectionTitle)
@@ -104,21 +110,33 @@ function createPage(movies) {
             })
         })
     })
-
-
- console.log(movies)
 }
 
-function reinitOwlCarousel() {
-
-}
 
 createPage(movies)
 
 
+function createCarousel() {
+    const gliders = document.querySelectorAll('.glider')
+
+    setTimeout(() => {
+        gliders.forEach(glider => {
+            new Glider(glider , {
+                slidesToShow: 7,
+                slidesToScroll: 7,
+                draggable: true,
+                dots: '.dots',
+                arrows: {
+                    prev: '.glider-prev',
+                    next: '.glider-next'
+                }
+            })
+        })
+    },2000)
+}
 
 
-
+createCarousel()
 
 
 async function fetchData (endpoint) {

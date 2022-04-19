@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix</title>
     <link rel="stylesheet" href="./sass/main.css" />
-    <link rel="shortcut icon" href="./resources/ico/netflix.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./resources/ico/netflix.ico"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,6 +28,11 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.6.6/glider.css"
     />
   </head>
   <body>
@@ -54,12 +63,16 @@
       <div class="main-movie">
         <div class="container">
           <div class="filter"></div>
-          <img src="" alt="Capa do filme" class="film-background">
+          <img src="" alt="Capa do filme" class="film-background" />
           <div class="information">
             <h3 class="main-movie-title"></h3>
             <p class="main-movie-description"></p>
             <div class="main-movie-buttons">
-              <button class="btn play" role="button" onclick="fetchData('/discover/movie?language=pt-BR?genre=adventure')">
+              <button
+                class="btn play"
+                role="button"
+                onclick="fetchData('/discover/movie?language=pt-BR?genre=adventure')"
+              >
                 <i class="fa-solid fa-play"></i>ASSITIR
               </button>
               <button class="btn more-information" role="button">
@@ -70,24 +83,19 @@
         </div>
         <div class="parental-rating">
           <div class="bar"></div>
-          <div class="age">
-            12
-          </div>
+          <div class="age">12</div>
         </div>
       </div>
     </main>
 
-    <div class="movies-section">
-
-    </div>
-
+    <div class="movies-section"></div>
 
     <footer>
       <div class="social-icons">
-        <i class="fa-brands fa-facebook-f social-link" ></i>
-        <i class="fa-brands fa-instagram social-link" ></i>
-        <i class="fa-brands fa-twitter social-link" ></i>
-        <i class="fa-brands fa-youtube social-link" ></i>
+        <i class="fa-brands fa-facebook-f social-link"></i>
+        <i class="fa-brands fa-instagram social-link"></i>
+        <i class="fa-brands fa-twitter social-link"></i>
+        <i class="fa-brands fa-youtube social-link"></i>
       </div>
       <div class="footer-options">
         <ul>
@@ -122,7 +130,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="./js/requests.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.6.6/glider.min.js"></script>
+    <script src="./js/renderpage.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
 </html>

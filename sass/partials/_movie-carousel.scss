@@ -7,7 +7,6 @@
 .movie-carousel {
     margin-top: 10px;
     padding: 0px 0px 0px 60px;
-    overflow-x: hidden;
 
     .section-title {
         font-size: 19px;
@@ -37,13 +36,8 @@
     }
 
     .movie-row {
-        width: 99999px;
         height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
         margin-bottom: 10px;
-        gap: 1px;
     }
 
 
@@ -55,7 +49,7 @@
         cursor: pointer;
 
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.01);
         }
 
         img {
