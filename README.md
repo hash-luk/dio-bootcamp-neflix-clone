@@ -17,8 +17,10 @@ Este foi um projeto bem simples feito em uma aula da DIO, um clone da UI da Netf
 
 - HTML
 - CSS
+- SASS
 - JavaScript
 - Jquery
+- TMDB API
 
 <br />
 
