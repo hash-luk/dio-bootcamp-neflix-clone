@@ -38,6 +38,10 @@ header .container-menu {
   justify-content: space-evenly;
 }
 
+.hamburguer {
+  display: none;
+}
+
 .logo {
   color: #E50914;
   font-family: "Open Sans", sans-serif;
@@ -86,6 +90,19 @@ nav a:hover {
   background: #141414 !important;
 }
 
+@media screen and (max-width: 480px) {
+  .options {
+    display: none;
+  }
+
+  .hamburguer {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+}
 .main-movie {
   width: 100%;
   height: 100vh;

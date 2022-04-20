@@ -1,14 +1,16 @@
-header .container-menu {
-    width: 100%;
-    height: 68px;
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 60px;
-    position: fixed;
-    z-index: 999;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4164040616246498) 35%, rgba(0,0,0,0) 100%);
+header  {
+    .container-menu{
+        width: 100%;
+        height: 68px;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 60px;
+        position: fixed;
+        z-index: 999;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4164040616246498) 35%, rgba(0,0,0,0) 100%);
+    }
 }
 
 .nav-menu {
@@ -24,6 +26,10 @@ header .container-menu {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.hamburguer {
+    display: none;
 }
 
 .logo {
@@ -72,4 +78,18 @@ nav a:hover {
 
 .black {
     background: $netflix-black !important;
+}
+
+@media screen and (max-width: $mobile-max-width) {
+    .options {
+        display: none;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
 }
